@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Iceland", monospace;
+}
+
+.rc-slider-track {
+  @apply bg-white;
+}
+
+.rc-slider-handle {
+  @apply border-none shadow-none opacity-100 #{!important};
+}
+
+.rc-slider-handle-dragging {
+  box-shadow: 0 0 0 4px white !important;
+}
