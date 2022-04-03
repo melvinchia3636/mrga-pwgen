@@ -58,7 +58,7 @@ function App() {
   }, [passwordLength, containUppercase, containLowercase, containNumber, containSymbol]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen overflow-hidden w-full bg-black text-green-500 select-none">
+    <div className="flex flex-col items-center justify-center h-screen overflow-hidden w-full bg-black text-yellow-500 select-none">
       <h1 className="text-5xl animate__animated animate__fadeInUp text-center px-8">Password Generator</h1>
       <p className="text-center text-lg mt-4 sm:text-xl max-w-2xl animate__animated animate__fadeInDown px-8">
         Generate secure and strong password.
