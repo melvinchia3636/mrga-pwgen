@@ -11,7 +11,7 @@ function Checkbox({
   return <div>
     <label class="relative flex justify-between items-center overflow-hidden">
     <input type="checkbox" class="sr-only peer" onClick={() => setValue(!value)} checked={value} />
-      <span class="w-10 h-6 flex items-center cursor-pointer flex-shrink-0 p-0.5 border-2 border-white duration-300 ease-in-out after:w-4 after:h-4 after:bg-white after:shadow-md after:duration-300 peer-checked:after:translate-x-4"></span>
+      <span class="w-10 h-6 flex items-center cursor-pointer flex-shrink-0 p-0.5 border-2 border-green-500 duration-300 ease-in-out after:w-4 after:h-4 after:bg-green-500 after:shadow-md after:duration-300 peer-checked:after:translate-x-4"></span>
     </label>
   </div>
 }
@@ -58,14 +58,12 @@ function App() {
   }, [passwordLength, containUppercase, containLowercase, containNumber, containSymbol]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen overflow-hidden w-full bg-slate-500 text-white select-none">
+    <div className="flex flex-col items-center justify-center h-screen overflow-hidden w-full bg-black text-green-500 select-none">
       <h1 className="text-5xl animate__animated animate__fadeInUp text-center px-8">Password Generator</h1>
       <p className="text-center text-lg mt-4 sm:text-xl max-w-2xl animate__animated animate__fadeInDown px-8">
-        Passwords are like underwear: you don't let people see it, you should
-        change it very often and you shouldn't share it with strangers hehe
-        (ﾉ･_-) ☆
+        Generate secure and strong password.
       </p>
-      <div className="flex animate__animated animate__zoomIn [animation-delay:0.5s] flex-row border-2 justify-between whitespace-nowrap border-white max-w-[90%] min-w-[80%] lg:min-w-[50%] p-4 mt-8 text-2xl">
+      <div className="flex animate__animated animate__zoomIn [animation-delay:0.5s] flex-row border-2 justify-between whitespace-nowrap border-green-500 max-w-[90%] min-w-[80%] lg:min-w-[50%] p-4 mt-8 text-2xl">
         <div className="overflow-x-auto overflow-y-hidden">{password}</div>
         <div className="flex items-center gap-3">
           <button onClick={generatePassword}>
@@ -128,7 +126,7 @@ function App() {
                     }
                   }
                 }}
-                className="bg-transparent w-12 text-center focus:outline-none focus:border-2 focus:border-white mt-0.5"
+                className="bg-transparent w-12 text-center focus:outline-none focus:border-2 focus:border-green-500 mt-0.5"
               />
               <button onClick={() => {
                 if (passwordLength + 1 <= 256) setPasswordLength(passwordLength + 1)
